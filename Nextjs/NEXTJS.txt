@@ -1,0 +1,18 @@
+--turbo    in dev _
+
+
+cache : "force-cache"       == static generated 
+  next:{revalidate:10}     refresh after 10 sec
+
+cache : "no-cache"        == SSR
+
+
+=====================================================================================
+
+cache : "no-store"  [params.id]   ==SSR
+
+by default       == SSG 
+
+next:{revalidate:10} ==ISR
+
+=========================================================================================

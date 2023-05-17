@@ -6,7 +6,20 @@ const res = await fetch(`${server}/users/new`, {
         headers: {
           "Content-Type": "application/json",
         },
-        credentials:"include",
+        credentials:"include",                       //cookies use hoti h.
         body: JSON.stringify(form),
       });
       const data = await res.json();
+
+==============================================================================================
+                               SSR SSG ISR
+==============================================================================================
+=====================================================================================
+
+cache : "no-store"  [params.id]   ==SSR
+
+by default       == SSG 
+
+next:{revalidate:10} ==ISR
+
+=========================================================================================
